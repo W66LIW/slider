@@ -1,38 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Asap&family=Cabin:wght@600&family=Montserrat:ital,wght@0,400;1,500&family=Outfit:wght@500&family=Raleway:wght@300;500&display=swap');
+
 .App {
+  /* text-align: center;
+  display: flex; */
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.Container {
+  background-image: url('./images/bg.svg');
+  background-size: cover;
   text-align: center;
+  display: flex;
+  height: 100vh;
+  width: fit-content;  
+  transition: transform 0.3s ease-in-out;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Slide {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100vh;
+  width: 100vw;
+  color: rgb(40, 40, 61);
+  font-size: 40px;
 }
 
-.App-link {
-  color: #61dafb;
+.Modal {
+  display: none;
 }
 
-@keyframes App-logo-spin {
-  from {
+.Home {
+  position: absolute;
+  top: 30px;
+  left: 90px;
+  width: 160px;
+}
+
+.Onpoint {
+  position: absolute;
+  bottom: 25px;
+  left: 90px;
+  width: 70px;
+}
+
+.Hello {
+  position: relative;
+  left: -360px;
+  font-size: 35px;
+  letter-spacing: 3px;
+  line-height: 60px;
+  text-transform: uppercase;
+  color: #242424;
+  font-family: "D IN Pro";
+  font-family: 'Abel', sans-serif;
+  font-family: 'Asap', sans-serif;
+  font-family: 'Cabin', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Outfit', sans-serif;
+  font-family: 'Raleway', sans-serif; 
+}
+
+.Task {
+  position: relative;
+  left: 60px;
+  text-align: left;
+  font-size: 100px;
+  letter-spacing: 11px;
+  line-height: 120px;
+  text-transform: uppercase;
+  color: #171717;
+  font-weight: 100;
+  font-family: 'Abel', sans-serif;
+  font-family: 'Asap', sans-serif;
+  font-family: 'Cabin', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Outfit', sans-serif;
+  font-family: 'Raleway', sans-serif;  
+}
+
+.Task span {
+  font-weight:900;    
+  -webkit-text-stroke: 9px;
+}
+
+.Layer {
+  position: absolute;
+  left: -100px;
+  top: 80px;
+  height: 140px;
+}
+
+.PinkSperm {
+  position: absolute;
+  left: 450px;
+  top: 160px;
+  height: 120px;
+  z-index: 3;
+}
+
+.Ball {
+  position: absolute;
+  right: 150px;
+  bottom: -110px;
+  height: 250px;
+  animation-name: big-ellips;
+  animation-duration: 15s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.Mini-ball {
+  position: absolute;
+  left: 400px;
+  bottom: 110px;
+  height: 80px;
+}
+
+.rot-container {
+  height: 200px;
+  animation-name: rot;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  padding: 20px;
+  position: absolute;
+}
+
+.rot {
+  height: 130px;
+  animation-name: rot;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+}
+
+@keyframes rot {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+  100% {
     transform: rotate(360deg);
   }
+}
+
+.line-animation {
+  animation-name: rot;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  position: absolute;
+  z-index: 1;
+  position: absolute;
+  animation-name: line;
+  animation-direction: alternate;
+}
+
+@keyframes line {
+  0% {
+    transform: translatex(0px) translatey(0px)
+  }
+  100% {
+      transform: translatex(40px) translatey(40px);
+}
+}
+
+@keyframes big-ellips {
+  0% {
+    transform: translatex(0px) translatey(0px);
+    height: 220px;
+  }
+  50% {
+    height: 250px;
+  }
+  100% {
+      transform: translatex(100px) translatey(0px);
+      height: 220px;
+}
+}
+
+.Message {
+  width: 768px;
+  height: 446px;
+  border-radius: 80px;
+  filter: drop-shadow(5.446px 8.387px 125px rgba(157,185,198,0.39));
+  background-color: #ffffff;
 }
