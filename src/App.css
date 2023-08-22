@@ -281,3 +281,50 @@
   border-radius: 4px;
   background-color: rgba(0,0,0,.5); 
   -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);} */
+
+  .TextBlockMini {
+    /* position: relative; */
+    padding-left: 55px;
+    padding-top: 50px;
+    width: 250px;
+    height: 150px;
+    border-radius: 40px;
+    filter: drop-shadow(5.446px 8.387px 125px rgba(157,185,198,0.39));
+    background-color: #ffffff;
+    font-size: 26px;
+  }
+
+  .KeyMessage {
+    height:220px;
+    width:650px;
+    font-size: 30px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #242424;
+    font-family: "D IN Pro";
+    font-family: 'Abel', sans-serif;
+    font-family: 'Asap', sans-serif;
+    font-family: 'Cabin', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Outfit', sans-serif;
+    font-family: 'Raleway', sans-serif; 
+  }
+
+  .Brend{
+    position: absolute;
+    top: 200px;
+    left: 370px;
+    font-size: 90px;
+    font-weight: 300;
+    letter-spacing: 21px;
+    text-transform: uppercase;
+    color: #242424;
+    font-family: "Gilroy";
+    font-family: "D IN Pro";
+    font-family: 'Abel', sans-serif;
+    font-family: 'Asap', sans-serif;
+    font-family: 'Cabin', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Outfit', sans-serif;
+    font-family: 'Raleway', sans-serif;
+  }
