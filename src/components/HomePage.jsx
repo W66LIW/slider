@@ -8,13 +8,14 @@ import topBall from "../images/Layer 5.svg";
 import bottomBall from "../images/bakti_1.svg";
 import bottomSperm from "../images/pink_sperm.svg";
 import btn from "../images/btn.svg";
+import { forwardRef } from "react";
 
-function HomePage(){
+const HomePage = forwardRef(function HomePage({onBtnClick}, ref){
     return (
-    <div id="0" className="Slide" onTouchStart={() => localStorage.SlideIndex = 0}>
+    <div ref={ref} id="0" className="Slide" onTouchStart={() => localStorage.SlideIndex = 0}>
             <img src={pinkSperm} className="PinkSperm" alt="img"/>
             <div className="rot-container" style={{zIndex: "3", right: "100px", top: "160px"}} >
-            <img src={img} className="rot" alt="img"/>
+                <img src={img} className="rot" alt="img"/>
             </div>
             <img src={layer} className="Layer"  alt="img"/>
             <img src={ball} className="Ball" alt="img"/>
@@ -25,8 +26,8 @@ function HomePage(){
             <img src={bottomSperm} className="Mini-ball" style={{bottom: "5px", left: "-110px", height: "190px"}} alt="img"/>                
             <p className="Hello">Привет,</p>
             <p className="Task" style={{zIndex: "1"}}>Это <span>не</span> коммерческое задание</p>
-            <img src={btn} alt="Button" style={{position: "absolute", top: "490px", right: "90px", width: "300px"}}/>
+            <img onClick={onBtnClick} src={btn} alt="Button" style={{position: "absolute", zIndex: "4",top: "490px", right: "90px", width: "300px"}}/>
         </div>)
-}
+})
 
 export default HomePage;
