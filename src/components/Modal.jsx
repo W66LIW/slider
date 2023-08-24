@@ -35,12 +35,12 @@ function Modal({active, onBtnClick}) {
                     <li>Venenatis lectus magna fringilla urna</li>
                 </ul>}
                 <div style={{position:"absolute", left:"240px", bottom:"30px", display:"flex", alignItems:"centre"}}>
-                    <img src={btnLeft} style={{width:"10px", marginRight:"20px"}} onClick={() => setIsFirstList(!isFirstList)}/>
+                    <img src={btnLeft} style={{width:"30px", paddingRight:"20px"}} onClick={() => setIsFirstList(!isFirstList)}/>
                     {isFirstList ? <img src={pinkEllipse} style={{width:"10px", marginRight:"10px"}}/> : 
                     <img src={emptyEllipse} style={{width:"10px", marginRight:"10px"}}/>} 
-                    {isFirstList ? <img src={emptyEllipse} style={{width:"10px", marginRight:"20px"}}/> : 
-                    <img src={pinkEllipse} style={{width:"10px", marginRight:"20px"}}/>} 
-                    <img src={btnRight} style={{width:"10px"}} onClick={() => setIsFirstList(!isFirstList)}/>
+                    {isFirstList ? <img src={emptyEllipse} style={{width:"10px"}}/> : 
+                    <img src={pinkEllipse} style={{width:"10px"}}/>} 
+                    <img src={btnRight} style={{width:"30px", paddingLeft:"20px"}} onClick={() => setIsFirstList(!isFirstList)}/>
                 </div>
             </div>
             

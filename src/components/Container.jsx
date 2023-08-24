@@ -1,21 +1,26 @@
-import { useEffect, useRef, useState } from "react";
+import {useEffect, useRef, useState } from "react";
 import home from "../images/global.svg";
 import onpoint from "../images/Shape 1.svg";
 import HomePage from './HomePage';
 import MessageText from './MessageText';
 import KeyMessage from './KeyMessage';
-import Modal from './Modal'
 
 function Container() {
-    localStorage.SlideIndex = +0;
+       
+    const [slideIndex, setSlideIndex] = useState(0);
+    // let slideIndex = +0;
     const homeRef = useRef(null);
     const messageTextRef = useRef(null);
-    
+    const keyMessageRef = useRef(null);
+    const refs = [homeRef, messageTextRef, keyMessageRef];
+
+    useEffect(() => {
+        refs[slideIndex].current.scrollIntoView({ behavior: "smooth"})
+    }, slideIndex)
     
     const handleClick = () => {
         messageTextRef.current.scrollIntoView({ behavior: "smooth"})
     }
-
 
     let isDragging = false,
         startPos = 0,
@@ -30,7 +35,7 @@ function Container() {
                     onTouchMove={(e) => touchMove(e)}>
                     <HomePage messageTextRef={messageTextRef} onBtnClick={handleClick} ref={homeRef}/>
                     <MessageText ref={messageTextRef}/>
-                    <KeyMessage />
+                    <KeyMessage ref={keyMessageRef}/>
                 </div>
                 <img onClick={() => homeRef.current.scrollIntoView({ behavior: "smooth"})} className="Home" src={home} alt="Home" />
                 <img className="Onpoint" src={onpoint} alt="Home" />
@@ -47,15 +52,15 @@ function Container() {
             isDragging = false;
             const movedBy = currentTranslate - prevTranslate;
     
-            if(movedBy < -100 && localStorage.SlideIndex < 2) {
-                localStorage.SlideIndex = +localStorage.SlideIndex + 1;
-                //document.getElementById(`${localStorage.SlideIndex}`).scrollIntoView({ behavior: "smooth"})
-                //console.log("left");
+            if(movedBy < -100 && slideIndex < 2) {
+                console.log(movedBy)
+                setSlideIndex(slideIndex - 1)
+                
             }
-            if(movedBy > 100 && localStorage.SlideIndex > 0) {
-                //console.log("right");
-                localStorage.SlideIndex = +localStorage.SlideIndex - 1;
-                //document.getElementById(`${localStorage.SlideIndex}`).scrollIntoView({ behavior: "smooth"})
+
+            if(movedBy > 100 && slideIndex > 0) {
+                console.log(movedBy)
+                setSlideIndex(slideIndex + 1)
             }
         }
     

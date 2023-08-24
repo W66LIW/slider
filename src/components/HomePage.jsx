@@ -12,7 +12,7 @@ import { forwardRef } from "react";
 
 const HomePage = forwardRef(function HomePage({onBtnClick}, ref){
     return (
-    <div ref={ref} id="0" className="Slide" onTouchStart={() => localStorage.SlideIndex = 0}>
+    <div ref={ref} className="Slide" onTouchStart={() => localStorage.SlideIndex = 0}>
             <img src={pinkSperm} className="PinkSperm" alt="img"/>
             <div className="rot-container" style={{zIndex: "3", right: "100px", top: "160px"}} >
                 <img src={img} className="rot" alt="img"/>

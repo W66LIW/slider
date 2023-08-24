@@ -327,19 +327,42 @@
   }
 
   .Anim {
-    animation-name: line;
+    animation-name: BubbleLine;
     animation-duration: 10s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate
   }
 
+  @keyframes BubbleLine {
+    0% {
+      transform: translatex(0px) translatey(0px)
+    }
+    100% {
+        transform: translatex(-40px) translatey(-30px);
+  }
+  }
+
    .AnimV{
-    animation-name: big-ellips;
+    animation-name: bubbles;
     animation-duration: 15s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
+  }
+
+  @keyframes bubbles {
+    0% {
+      transform: translatex(0px) translatey(0px);
+      height: 220px;
+    }
+    50% {
+      height: 250px;
+    }
+    100% {
+        transform: translatex(50px) translatey(0px);
+        height: 220px;
+  }
   }
 
 .Modal {
@@ -369,7 +392,7 @@
 .Modal-content ul {
   list-style: none;
   position: relative;
-  width: 450px;
+  width: 460px;
   top: 130px;
   left: 240px;
   font-size: 23px;

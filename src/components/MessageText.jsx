@@ -5,7 +5,7 @@ import txt from '../images/slide2/txt (1).svg';
 
 const MessageText = forwardRef (function MessageText(props, ref) {
     return(
-        <div ref={ref} id="1" className="Slide" onTouchStart={() => {localStorage.SlideIndex = 1}}>
+        <div ref={ref} className="Slide" onTouchStart={() => {localStorage.SlideIndex = 1}}>
             <p className='Message-text'>Текст <br/>сообщения</p>
             {/* <img src={rectangle} alt="rectangle" />
             <img src={scroll} alt="scroll" /> */}

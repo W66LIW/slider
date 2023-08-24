@@ -3,9 +3,9 @@ import icon2 from "../images/slide3/icon2.svg";
 import Bottle from "./Bottle";
 import button from "../images/slide3/btn3.svg";
 import Modal from "./Modal";
-import { useState } from "react";
+import { forwardRef, useState } from "react";
 
-function KeyMessage() {
+const KeyMessage = forwardRef(function KeyMessage(props, ref) {
     
     const [isModalActive, setIsModalActive] = useState(false);
     function handleClick() {
@@ -13,7 +13,7 @@ function KeyMessage() {
     }
 
     return(
-        <div id="2" className="Slide" onTouchStart={() => {localStorage.SlideIndex = 2}} 
+        <div ref={ref} className="Slide" onTouchStart={() => {localStorage.SlideIndex = 2}} 
         style={{justifyContent:"end", alignItems:"end"}} >
             <p className="KeyMessage">Ключевое сообщение</p>
             <div style={{display:"-webkit-inline-box", width:"800px", height:"380px", paddingBottom:"30px", paddingLeft:"20px"}}>
@@ -38,6 +38,6 @@ function KeyMessage() {
             <Bottle/>           
         </div>
     )
-}
+})
 
 export default KeyMessage;
