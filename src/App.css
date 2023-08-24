@@ -28,10 +28,6 @@
   font-size: 40px;
 }
 
-.Modal {
-  display: none;
-}
-
 .Home {
   position: absolute;
   top: 30px;
@@ -312,6 +308,7 @@
 
   .Brend{
     position: absolute;
+    z-index: 2;
     top: 200px;
     left: 370px;
     font-size: 90px;
@@ -344,3 +341,26 @@
     animation-iteration-count: infinite;
     animation-direction: alternate;
   }
+
+.Modal {
+  position: absolute;
+  z-index: 1;
+  background-color: rgba(22, 39, 62, 0.7);
+  justify-content: end;
+  align-items: end;
+  display: none;
+}
+
+.Active-modal {
+  display: flex;
+}
+
+.Modal-content {
+  opacity: 4;
+  width: 810px;
+  height: 555px;
+  border-radius: 50px;
+  background-color: #ffffff;
+  margin-bottom: 80px;
+  margin-right: 76px;
+}

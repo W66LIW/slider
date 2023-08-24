@@ -31,7 +31,6 @@ function Container() {
                     <HomePage messageTextRef={messageTextRef} onBtnClick={handleClick} ref={homeRef}/>
                     <MessageText ref={messageTextRef}/>
                     <KeyMessage />
-                    <Modal/>
                 </div>
                 <img onClick={() => homeRef.current.scrollIntoView({ behavior: "smooth"})} className="Home" src={home} alt="Home" />
                 <img className="Onpoint" src={onpoint} alt="Home" />
