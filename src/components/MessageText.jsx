@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
-import rectangle from '../images/Rectangle.svg';
-import scroll from '../images/scroll-btn.svg';
-import txt from '../images/txt (1).svg';
+import rectangle from '../images/slide2/Rectangle.svg';
+import scroll from '../images/slide2/scroll-btn.svg';
+import txt from '../images/slide2/txt (1).svg';
 
 const MessageText = forwardRef (function MessageText(props, ref) {
     return(

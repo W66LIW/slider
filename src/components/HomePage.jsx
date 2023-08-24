@@ -1,13 +1,13 @@
-import img from "../images/imgs.svg";
-import layer from "../images/Layer 7.svg";
-import pinkSperm from "../images/pink_sperm_1.svg";
-import ball from "../images/Layer 4.svg";
-import miniBall from "../images/Layer 4 copy.svg";
-import topMiniBall from "../images/Layer 4 copy 2.svg";
-import topBall from "../images/Layer 5.svg";
-import bottomBall from "../images/bakti_1.svg";
-import bottomSperm from "../images/pink_sperm.svg";
-import btn from "../images/btn.svg";
+import img from "../images/slide1/imgs.svg";
+import layer from "../images/slide1/Layer 7.svg";
+import pinkSperm from "../images/slide1/pink_sperm_1.svg";
+import ball from "../images/slide1/Layer 4.svg";
+import miniBall from "../images/slide1/Layer 4 copy.svg";
+import topMiniBall from "../images/slide1/Layer 4 copy 2.svg";
+import topBall from "../images/slide1/Layer 5.svg";
+import bottomBall from "../images/slide1/bakti_1.svg";
+import bottomSperm from "../images/slide1/pink_sperm.svg";
+import btn from "../images/slide1/btn.svg";
 import { forwardRef } from "react";
 
 const HomePage = forwardRef(function HomePage({onBtnClick}, ref){
