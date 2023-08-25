@@ -14,9 +14,9 @@ function Container() {
     const keyMessageRef = useRef(null);
     const refs = [homeRef, messageTextRef, keyMessageRef];
 
-    useEffect(() => {
-        refs[slideIndex].current.scrollIntoView({ behavior: "smooth"})
-    }, slideIndex)
+    // useEffect(() => {
+    //     refs[slideIndex].current.scrollIntoView({ behavior: "smooth"})
+    // }, [slideIndex])
     
     const handleClick = () => {
         messageTextRef.current.scrollIntoView({ behavior: "smooth"})
@@ -55,7 +55,6 @@ function Container() {
             if(movedBy < -100 && slideIndex < 2) {
                 console.log(movedBy)
                 setSlideIndex(slideIndex - 1)
-                
             }
 
             if(movedBy > 100 && slideIndex > 0) {
@@ -68,18 +67,12 @@ function Container() {
             if(isDragging) {  
                 const currentPos = getPositionX(e); 
                 currentTranslate =  prevTranslate + currentPos - startPos;    
-        }}
+            }
+        }
     
         function getPositionX(e) {
             return (e.touches[0].clientX)
-    
-        }
-
-      
-            
-        
-    
-   
+        }   
 }
 
 export default Container;
