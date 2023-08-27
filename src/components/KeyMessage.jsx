@@ -1,19 +1,18 @@
-import icon1 from "../images/slide3/icon1.svg";
-import icon2 from "../images/slide3/icon2.svg";
-import Bottle from "./Bottle";
-import button from "../images/slide3/btn3.svg";
-import Modal from "./Modal";
-import { forwardRef, useState } from "react";
+import icon1 from '../images/slide3/icon1.svg';
+import icon2 from '../images/slide3/icon2.svg';
+import Bottle from './Bottle';
+import button from '../images/slide3/btn3.svg';
+import Modal from './Modal';
+import { useState } from 'react';
 
-const KeyMessage = forwardRef(function KeyMessage(props, ref) {
-    
+function KeyMessage() {
     const [isModalActive, setIsModalActive] = useState(false);
     function handleClick() {
         setIsModalActive(!isModalActive)
     }
 
     return(
-        <div ref={ref} className="Slide" onTouchStart={() => {localStorage.SlideIndex = 2}} 
+        <div id="keyMessage" className="Slide" onTouchStart={() => {localStorage.SlideIndex = 2}} 
         style={{justifyContent:"end", alignItems:"end"}} >
             <p className="KeyMessage">Ключевое сообщение</p>
             <div style={{display:"-webkit-inline-box", width:"800px", height:"380px", paddingBottom:"30px", paddingLeft:"20px"}}>
@@ -38,6 +37,6 @@ const KeyMessage = forwardRef(function KeyMessage(props, ref) {
             <Bottle/>           
         </div>
     )
-})
+}
 
 export default KeyMessage;

@@ -13,10 +13,10 @@ const MessageText = forwardRef (function MessageText(props, ref) {
     }, [])  
     
     return(
-        <div ref={ref} className="Slide">
-            <p className='Message-text'>Текст <br/>сообщения</p>
+        <div ref={ref} id="Message" className="Slide">
+            <p className="Message-text">Текст <br/>сообщения</p>
             <div className="Message-bg">
-                <div className='Scroll-block'>
+                <div className="Scroll-block">
                     <img src={txt} alt="text" style={{width: "656px"}}/>
                 </div> 
             </div>             

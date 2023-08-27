@@ -1,9 +1,9 @@
-import { useState } from "react";
-import btnClose from "../images/slide3/btn_close.svg";
-import btnLeft from "../images/slide3/btn_left.svg";
-import btnRight from "../images/slide3/btn_right.svg";
-import pinkEllipse from "../images/slide3/pinkEllipse.svg";
-import emptyEllipse from "../images/slide3/emptyEllipse.svg"
+import { useState } from 'react';
+import btnClose from '../images/slide3/btn_close.svg';
+import btnLeft from '../images/slide3/btn_left.svg';
+import btnRight from '../images/slide3/btn_right.svg';
+import pinkEllipse from '../images/slide3/pinkEllipse.svg';
+import emptyEllipse from '../images/slide3/emptyEllipse.svg';
 
 function Modal({active, onBtnClick}) {
 

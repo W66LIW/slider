@@ -1,12 +1,12 @@
-import bottle from "../images/slide3/bottle.svg";
-import b6 from "../images/slide3/bubble6.svg";
-import b5 from "../images/slide3/5.svg";
-import b3 from "../images/slide3/3.svg";
-import b1 from "../images/slide3/1.svg";
-import b2 from "../images/slide3/2.svg";
-import b7 from "../images/slide3/7.svg";
-import b8 from "../images/slide3/8.svg";
-import b4 from "../images/slide3/4.svg";
+import bottle from '../images/slide3/bottle.svg';
+import b6 from '../images/slide3/bubble6.svg';
+import b5 from '../images/slide3/5.svg';
+import b3 from '../images/slide3/3.svg';
+import b1 from '../images/slide3/1.svg';
+import b2 from '../images/slide3/2.svg';
+import b7 from '../images/slide3/7.svg';
+import b8 from '../images/slide3/8.svg';
+import b4 from '../images/slide3/4.svg';
 
 export default function Bottle() {
     return (
