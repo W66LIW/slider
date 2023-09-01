@@ -1,10 +1,12 @@
+import { useRef } from 'react';
 import './App.css';
-import Container from './components/Container'
+import SliderContainer from './components/SliderContainer'
 
 function App() {
+  const appRef = useRef(null);
   return (
-    <div className="App">
-      <Container/>
+    <div ref={appRef} className="App">
+      <SliderContainer appRef={appRef}/>
     </div>
   );
 }

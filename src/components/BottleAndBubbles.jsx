@@ -8,7 +8,7 @@ import b7 from '../images/slide3/7.svg';
 import b8 from '../images/slide3/8.svg';
 import b4 from '../images/slide3/4.svg';
 
-const Bottle = () => {
+const BottleAndBubbles = () => {
     return (
         <div className="Bottle-container">
             <img src={bottle} alt="bottle" className="Bottle"/>
@@ -24,4 +24,4 @@ const Bottle = () => {
     )
 }
 
-export default Bottle;
+export default BottleAndBubbles;

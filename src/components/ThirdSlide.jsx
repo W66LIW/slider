@@ -1,13 +1,13 @@
 import icon1 from '../images/slide3/icon1.svg';
 import icon2 from '../images/slide3/icon2.svg';
-import Bottle from './Bottle';
+import BottleAndBubbles from './BottleAndBubbles';
 import button from '../images/slide3/btn3.svg';
 import Modal from './Modal';
 import { useState } from 'react';
 
-const KeyMessage = () => {
+const TherdSlide = () => {
     const [isModalActive, setIsModalActive] = useState(false);
-    const handleClick = () => {
+    const openModal = () => {
         setIsModalActive(!isModalActive)
     }
 
@@ -28,13 +28,13 @@ const KeyMessage = () => {
                     </div>
                 </div>
                 <img src={button} alt="button"
-                    onClick={handleClick} />
+                    onClick={openModal} />
             </div>
             <h5 className="Brend">Brend<b>XY</b></h5>
-            <Modal active={isModalActive} onBtnClick={handleClick}/> 
-            <Bottle/>           
+            <Modal active={isModalActive} closeModal={openModal}/> 
+            <BottleAndBubbles/>           
         </div>
     )
 }
 
-export default KeyMessage;
+export default TherdSlide;

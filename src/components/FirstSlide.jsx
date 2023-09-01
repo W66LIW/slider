@@ -10,7 +10,7 @@ import bottomSperm from '../images/slide1/pink_sperm.svg';
 import btn from '../images/slide1/btn.svg';
 import { forwardRef } from 'react';
 
-const HomePage = forwardRef(({onBtnClick}, ref) => {
+const FirstSlide = forwardRef(({onBtnClick}, ref) => {
     return (
     <div ref={ref} id="home" className="Slide" onTouchStart={() => localStorage.SlideIndex = 0}>                
             <p className="Hello">Привет,</p>
@@ -30,4 +30,4 @@ const HomePage = forwardRef(({onBtnClick}, ref) => {
         </div>)
 })
 
-export default HomePage;
+export default FirstSlide;

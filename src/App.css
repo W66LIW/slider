@@ -41,6 +41,7 @@
 
 .Onpoint {
   position: absolute;
+  z-index: 2;
   bottom: 25px;
   left: 130px;
   width: 70px;
@@ -267,6 +268,7 @@
 
 .Scroll-block img {
   width: 656px;
+  height: 630px;
 }
 
 .Scroll-track {

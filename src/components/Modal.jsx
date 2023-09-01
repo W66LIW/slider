@@ -5,16 +5,16 @@ import btnRight from '../images/slide3/btn_right.svg';
 import pinkEllipse from '../images/slide3/pinkEllipse.svg';
 import emptyEllipse from '../images/slide3/emptyEllipse.svg';
 
-const Modal = ({active, onBtnClick}) => {
+const Modal = ({active, closeModal}) => {
 
     const [isFirstList, setIsFirstList] = useState(true);
 
     return(
         <div className={active ? "Slide Modal Active-modal" : "Slide Modal"} 
-        onClick={onBtnClick}>
+        onClick={closeModal}>
             <div className="Modal-content" onClick={e => e.stopPropagation()}>
                 <img src={btnClose} alt="close button" className="Close-button"
-                onClick={onBtnClick}/>                
+                onClick={closeModal}/>                
                 <p>Преимущества</p> 
                 {isFirstList ? 
                 <ul>
