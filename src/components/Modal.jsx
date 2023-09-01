@@ -5,7 +5,7 @@ import btnRight from '../images/slide3/btn_right.svg';
 import pinkEllipse from '../images/slide3/pinkEllipse.svg';
 import emptyEllipse from '../images/slide3/emptyEllipse.svg';
 
-function Modal({active, onBtnClick}) {
+const Modal = ({active, onBtnClick}) => {
 
     const [isFirstList, setIsFirstList] = useState(true);
 
@@ -13,9 +13,9 @@ function Modal({active, onBtnClick}) {
         <div className={active ? "Slide Modal Active-modal" : "Slide Modal"} 
         onClick={onBtnClick}>
             <div className="Modal-content" onClick={e => e.stopPropagation()}>
-                <img src={btnClose} alt="close button" style={{position:"absolute", top:"40px", right:"30px", width:"40px"}}
+                <img src={btnClose} alt="close button" className="Close-button"
                 onClick={onBtnClick}/>                
-                <p style={{marginLeft:"230px", marginTop:"20px"}}>Преимущества</p> 
+                <p>Преимущества</p> 
                 {isFirstList ? 
                 <ul>
                     <li className="Number">01</li>
@@ -34,13 +34,13 @@ function Modal({active, onBtnClick}) {
                     <li className="Number">05</li>
                     <li>Venenatis lectus magna fringilla urna</li>
                 </ul>}
-                <div style={{position:"absolute", left:"240px", bottom:"30px", display:"flex", alignItems:"centre"}}>
-                    <img src={btnLeft} style={{width:"30px", paddingRight:"20px"}} onClick={() => setIsFirstList(!isFirstList)}/>
-                    {isFirstList ? <img src={pinkEllipse} style={{width:"10px", marginRight:"10px"}}/> : 
-                    <img src={emptyEllipse} style={{width:"10px", marginRight:"10px"}}/>} 
-                    {isFirstList ? <img src={emptyEllipse} style={{width:"10px"}}/> : 
-                    <img src={pinkEllipse} style={{width:"10px"}}/>} 
-                    <img src={btnRight} style={{width:"30px", paddingLeft:"20px"}} onClick={() => setIsFirstList(!isFirstList)}/>
+                <div className="Flipper">
+                    <img src={btnLeft} className="Arrow" onClick={() => setIsFirstList(!isFirstList)}/>
+                    {isFirstList ? <img className="Ellipse" src={pinkEllipse}/> : 
+                    <img src={emptyEllipse} className="Ellipse"/>} 
+                    {isFirstList ? <img src={emptyEllipse} className="Ellipse"/> : 
+                    <img src={pinkEllipse} className="Ellipse"/>} 
+                    <img src={btnRight} className="Arrow" onClick={() => setIsFirstList(!isFirstList)}/>
                 </div>
             </div>
             

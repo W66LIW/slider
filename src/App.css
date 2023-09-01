@@ -27,6 +27,11 @@
   font-size: 40px;
 }
 
+.Key-message-slide {
+  justify-content: end;
+  align-items: end;
+}
+
 .Home {
   position: absolute;
   top: 30px;
@@ -60,6 +65,7 @@
 
 .Task {
   position: relative;
+  z-index: 1;
   left: 60px;
   text-align: left;
   font-size: 100px;
@@ -81,57 +87,46 @@
   -webkit-text-stroke: 9px;
 }
 
-.Layer {
+.Ball-1 {
   position: absolute;
-  left: -100px;
-  top: 80px;
-  height: 140px;
-}
-
-.PinkSperm {
-  position: absolute;
-  left: 450px;
-  top: 160px;
-  height: 120px;
-  z-index: 3;
-}
-
-.Ball {
-  position: absolute;
-  right: 150px;
-  bottom: -110px;
-  height: 250px;
-  animation-name: big-ellips;
-  animation-duration: 15s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-
-.Mini-ball {
-  position: absolute;
-  left: 400px;
-  bottom: 110px;
+  top: 30px;
+  left: 880px;
   height: 80px;
 }
 
-.rot-container {
-  height: 200px;
-  animation-name: rot;
-  animation-duration: 10s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  padding: 20px;
+.Ball-2 {
   position: absolute;
+  z-index: 1;
+  top: 100px;
+  left: 750px;
+  height: 75px;
+  animation-name: line;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
 }
 
-.rot {
+.rot-container {
+  position: absolute;
+  z-index: 3;
+  top: 160px;
+  right: 100px;
+  height: 200px;
+  padding: 20px;
+  animation-name: rot;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.Ball-3 {
   height: 130px;
   animation-name: rot;
   animation-duration: 20s;
-  animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-direction: reverse;
+  animation-timing-function: linear;
 }
 
 @keyframes rot {
@@ -143,16 +138,17 @@
   }
 }
 
-.line-animation {
-  animation-name: rot;
-  animation-duration: 10s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
+.Ball-4 {
   position: absolute;
   z-index: 1;
-  position: absolute;
+  bottom: 170px;
+  left: 25px;
+  height: 80px;
   animation-name: line;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
   animation-direction: alternate;
+  animation-timing-function: linear;  
 }
 
 @keyframes line {
@@ -161,7 +157,25 @@
   }
   100% {
       transform: translatex(40px) translatey(40px);
+}}
+
+.Ball-5 {
+  position: absolute;
+  bottom: 35px;
+  left: 400px;
+  height: 80px;
 }
+
+.Ball-6 {
+  position: absolute;
+  bottom: -110px;
+  right: 150px;
+  height: 250px;
+  animation-name: big-ellips;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
 }
 
 @keyframes big-ellips {
@@ -175,7 +189,36 @@
   100% {
       transform: translatex(100px) translatey(0px);
       height: 220px;
+}}
+
+.Top-sperm {
+  position: absolute;
+  z-index: 3;
+  top: 160px;
+  left: 450px;
+  height: 120px;
 }
+
+.Bottom-sperm {
+  position: absolute;
+  bottom: 5px;
+  left: -110px;
+  height: 190px;
+}
+
+.Layer {
+  position: absolute;
+  top: 80px;
+  left: -100px;
+  height: 140px;
+}
+
+.Next-btn {
+  position: absolute;
+  z-index: 4;
+  top: 490px;
+  right: 90px; 
+  width: 300px;
 }
 
 .Message-text {
@@ -222,7 +265,117 @@
   background-color: transparent;
 } 
 
-.TextBlockMini { 
+.Scroll-block img {
+  width: 656px;
+}
+
+.Scroll-track {
+  position: absolute;
+  left: 90px;
+  top: 240px;
+  height: 440px;
+  width: 7px;
+  border-radius: 10px;
+  background-color: black;
+}
+
+.Scroll-btn {
+  position: relative;
+  top: -5px;
+  left: -7px;
+  height: 490px;
+  width: 40px;
+  border-radius: 10px;
+  overflow-y: scroll;
+}
+
+.Scroll-btn div {
+  height: 840px;
+  position: relative
+}
+
+.Scroll-btn div img {
+  position: relative;
+  width: 20px;
+  top: 350px;
+}
+
+.Sperm1-slide2 {
+  position: absolute;
+  animation-name: swim;
+  animation-duration: 10s;
+  animation-timing-function:inherit;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  top: 130px; 
+  left: 830px;
+  height: 150px;
+}
+
+.Sperm2-slide2 {
+  position: absolute;
+  animation-name: swim;
+  animation-duration: 10s;
+  animation-timing-function:inherit;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  top: 135px;
+  left: 670px;
+  height: 300px;
+}
+
+.Sperm3-slide2 {
+  position: absolute;
+  animation-name: swim;
+  animation-duration: 10s;
+  animation-timing-function:inherit;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  top: 160px;
+  left: 500px;
+  height: 500px;
+}
+
+.Sperm4-slide2 {
+  position: absolute;
+  animation-name: swim;
+  animation-duration: 10s;
+  animation-timing-function:inherit;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  bottom: 0px;
+  left: 970px;
+  height: 300px
+}
+
+.Sperm5-slide2 {
+  position: absolute;
+  animation-name: swim;
+  animation-duration: 10s;
+  animation-timing-function:inherit;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  bottom: 30px;
+  left: 1000px;
+  height: 150px;
+}
+
+.Main-block {
+  display: -webkit-inline-box;
+  width: 800px;
+  height: 380px; 
+  padding-bottom: 30px;
+  padding-left: 20px;
+}
+
+.Main-block img {
+  width: 250px;
+  position: relative;
+  top: 190px;
+  left: -250px
+}
+
+.TextBlockMini1 { 
   padding-left: 55px;
   padding-top: 50px;
   width: 250px;
@@ -231,6 +384,35 @@
   filter: drop-shadow(5.446px 8.387px 125px rgba(157,185,198,0.39));
   background-color: #ffffff;
   font-size: 26px;
+  width: 420px;
+  height: 280px; 
+  margin-right: 35px; 
+  padding-left: 120px;
+}
+
+.TextBlockMini1 img {
+  width: 75px; 
+  position: absolute; 
+  top: -40px; 
+  left: 120px;
+}
+
+.TextBlockMini2 { 
+  padding-left: 55px;
+  padding-top: 50px;
+  width: 250px;
+  height: 150px;
+  border-radius: 40px;
+  filter: drop-shadow(5.446px 8.387px 125px rgba(157,185,198,0.39));
+  background-color: #ffffff;
+  font-size: 26px;
+}
+
+.TextBlockMini2 img {
+  width: 75px; 
+  position: absolute; 
+  top: -27px;
+  left: 50px;
 }
 
 .KeyMessage {
@@ -254,9 +436,9 @@
   z-index: 2;
   top: 210px;
   left: 360px;
-  font-size: 90px;
+  font-size: 85px;
   font-weight: 300;
-  letter-spacing: 5px;
+  letter-spacing: 7px;
   text-transform: uppercase;
   color: #242424;
   font-family: "Gilroy";
@@ -267,6 +449,96 @@
   font-family: 'Montserrat', sans-serif;
   font-family: 'Outfit', sans-serif;
   font-family: 'Raleway', sans-serif;
+}
+
+.Brend b {
+  -webkit-text-stroke: 6px;
+  letter-spacing: 18px;
+  font-size: 78px;
+}
+
+.Bottle-container {
+  position: absolute; 
+  bottom: -40px;
+  left: 60px;
+}
+
+.Bottle {
+  position: relative;
+  z-index: 2;
+  height: 700px;
+}
+
+.Bubble1 {
+  position: absolute; 
+  z-index: 1;
+  width: 45px;
+  top: 20px;
+  right: 25px;
+  opacity: 0.929;
+}
+
+.Bubble2 {
+  position: absolute;
+  z-index: 2;
+  width: 75px;
+  top: 100px;
+  right: 30px;
+  opacity: 0.929;
+}
+
+.Bubble3 {
+  position: absolute;
+  z-index: 1;
+  width: 40px;
+  top: 140px;
+  left: 30px;
+  opacity: 0.929;
+}
+
+.Bubble4 {
+  position: absolute;
+  z-index: 1;
+  width: 135px;
+  top: 230px;
+  right: -50px;
+  opacity: 0.929;
+}
+
+.Bubble5 {
+  position: absolute;
+  z-index: 1;
+  width: 45px;
+  top: 400px;
+  left: -35px;
+  opacity: 0.929;
+}
+
+.Bubble6 {
+  position: absolute;
+  z-index: 2;
+  width: 100px;
+  top: 500px;
+  left: -25px;
+  opacity: 0.929;
+}
+
+.Bubble7 {
+  position: absolute;
+  z-index: 1;
+  width: 55px;
+  top: 500px;
+  right: -40px;
+  opacity: 0.929;
+}
+
+.Bubble8 {
+  position: absolute;
+  z-index: 2;
+  width: 170px;
+  bottom: -70px;
+  right: -23px;
+  opacity: 0.929;
 }
 
   .Anim {
@@ -332,6 +604,18 @@
   margin-right: 76px;
 }
 
+.Close-button {
+  position: absolute;
+  top: 40px;
+  right: 30px;
+  width: 40px;
+}
+
+.Modal-content p {
+  margin-left: 230px;
+  margin-top: 20px;
+}
+
 .Modal-content ul {
   list-style: none;
   position: relative;
@@ -347,15 +631,6 @@ font-weight: 900;
 color:rgb(167, 216, 232);
 }
 
-.Sperm-slide2 {
-  position: absolute;
-  animation-name: swim;
-  animation-duration: 10s;
-  animation-timing-function:inherit;
-  animation-iteration-count: infinite;
-  animation-fill-mode: forwards;
-}
-
 @keyframes swim{
   0% {
     opacity: 0;
@@ -369,4 +644,22 @@ color:rgb(167, 216, 232);
     opacity: 0;
     transform: translatex(-100px) translatey(-70px);
   }
+}
+
+.Flipper {
+  position: absolute;
+  left: 230px;
+  bottom: 30px;
+  width: 110px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Arrow {
+  width: 29px;
+  padding: 10px;
+}
+
+.Ellipse {
+  width: 9px;
 }
