@@ -12,7 +12,11 @@ const SliderContainer = ({appRef}) => {
     const [slideIndex, setSlideIndex] = useState(+0);
 
     useEffect(() => {
-    appRef.current.scrollTo((1024*slideIndex), 0)
+    appRef.current.scrollTo({
+        top: 0,
+        left: 1024*slideIndex,
+        behavior: "smooth",
+      })
     }, [swipe])
 
     let isDragging = false;
@@ -42,13 +46,12 @@ const SliderContainer = ({appRef}) => {
         const movedBy = currentTranslate - prevTranslate;  
         if(movedBy < -200 && slideIndex < 2) {
             setSlideIndex(slideIndex + 1);
-            setSwipe(movedBy);
         } else if(movedBy > 200 && slideIndex > 0) {
             setSlideIndex(slideIndex - 1);
-            setSwipe(movedBy);
-        } else {
-            setSwipe(movedBy) }
         }
+        setSwipe(movedBy)
+        }
+        
     
     const getPositionX = (e) => e.touches[0].clientX;
 

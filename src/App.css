@@ -141,7 +141,7 @@
 
 .Ball-4 {
   position: absolute;
-  z-index: 1;
+  z-index: 0;
   bottom: 170px;
   left: 25px;
   height: 80px;
@@ -224,7 +224,7 @@
 
 .Message-text {
   display:flex;
-  justify-content: start;
+  justify-content: flex-start;
   width: 83%;
   font-size: 29px;
   letter-spacing: 3px;
