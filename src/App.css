@@ -1,11 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Abel&family=Asap&family=Cabin:wght@600&family=Montserrat:ital,wght@0,400;1,500&family=Outfit:wght@500&family=Raleway:wght@300;500&display=swap');
 
-.App {
-  overflow-x: scroll;
-  overflow-y: hidden;
-  scroll-behavior: smooth;
-}
-
 .Container {
   background-image: url('./images/bg.svg');
   background-size: cover;

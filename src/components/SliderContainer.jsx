@@ -1,23 +1,13 @@
-import { useEffect, useRef, useState } from 'react';
+import { useRef } from 'react';
 import home from '../images/global.svg';
 import onpoint from '../images/Shape 1.svg';
 import FirstSlide from './FirstSlide';
 import SecondSlide from './SecondSlide';
 import ThirdSlide from './ThirdSlide';
 
-const SliderContainer = ({appRef}) => {
-    const firstSlideRef = useRef(null);
-    const secondSlideRef = useRef(null);
-    const [swipe, setSwipe] = useState("");
-    const [slideIndex, setSlideIndex] = useState(+0);
-
-    useEffect(() => {
-    appRef.current.scrollTo({
-        top: 0,
-        left: 1024*slideIndex,
-        behavior: "smooth",
-      })
-    }, [swipe])
+const SliderContainer = () => {
+    const containerRef = useRef(null);
+    let slideIndex = +0;
 
     let isDragging = false;
     let startPos = 0;
@@ -25,44 +15,42 @@ const SliderContainer = ({appRef}) => {
     let prevTranslate = 0;
 
     const handleBtnClick = () => {
-        secondSlideRef.current.scrollIntoView({ behavior: "smooth"});
-        setSlideIndex(+1) }
+        slideIndex = +1; 
+        containerRef.current.style.transform = `translateX(-${slideIndex*1024}px`;}
     
     const handleHomeClick = () => {
-        firstSlideRef.current.scrollIntoView({ behavior: "smooth"})
-        setSlideIndex(+0) }
+        slideIndex = 0;
+        containerRef.current.style.transform = `translateX(-${slideIndex*1024}px`;}
     
     const touchStart = (e) => {       
-            startPos = getPositionX(e) 
-            isDragging = true }
+            startPos = getPositionX(e);
+            isDragging = true; }
 
     const touchMove = (e) => { 
         if(isDragging) {  
             const currentPos = getPositionX(e); 
-            currentTranslate =  prevTranslate + currentPos - startPos }}
+            currentTranslate =  prevTranslate + currentPos - startPos; }}
     
     const touchEnd = () => {
         isDragging = false;
         const movedBy = currentTranslate - prevTranslate;  
         if(movedBy < -200 && slideIndex < 2) {
-            setSlideIndex(slideIndex + 1);
+            slideIndex += 1;
         } else if(movedBy > 200 && slideIndex > 0) {
-            setSlideIndex(slideIndex - 1);
-        }
-        setSwipe(movedBy)
+            slideIndex -= 1;}
+        containerRef.current.style.transform = `translateX(-${slideIndex*1024}px`;
         }
         
-    
     const getPositionX = (e) => e.touches[0].clientX;
-
+    
     return(
         <div>
-            <div className="Container"            
+            <div ref={containerRef} className="Container"            
                 onTouchStart={(e) => touchStart(e)}
                 onTouchEnd={touchEnd}
                 onTouchMove={(e) => touchMove(e)}>
-                <FirstSlide onBtnClick={handleBtnClick} ref={firstSlideRef}/>
-                <SecondSlide ref={secondSlideRef}/>
+                <FirstSlide onBtnClick={handleBtnClick}/>
+                <SecondSlide/>
                 <ThirdSlide/>
             </div>
             <img onClick={handleHomeClick} className="Home" src={home} alt="Home" />

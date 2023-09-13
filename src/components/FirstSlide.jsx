@@ -8,11 +8,10 @@ import topBall from '../images/slide1/Layer 5.svg';
 import bottomBall from '../images/slide1/bakti_1.svg';
 import bottomSperm from '../images/slide1/pink_sperm.svg';
 import btn from '../images/slide1/btn.svg';
-import { forwardRef } from 'react';
 
-const FirstSlide = forwardRef(({onBtnClick}, ref) => {
+const FirstSlide = ({onBtnClick}) => {
     return (
-    <div ref={ref} id="home" className="Slide" onTouchStart={() => localStorage.SlideIndex = 0}>                
+    <div id="home" className="Slide" onTouchStart={() => localStorage.SlideIndex = 0}>                
             <p className="Hello">Привет,</p>
             <p className="Task">Это <span>не</span> коммерческое задание</p>
             <img src={topMiniBall} className="Ball-1" alt="ball-1"/>
@@ -28,6 +27,6 @@ const FirstSlide = forwardRef(({onBtnClick}, ref) => {
             <img src={bottomSperm} className="Bottom-sperm" alt="img"/>
             <img onClick={onBtnClick} src={btn} alt="Button" className="Next-btn"/>
         </div>)
-})
+}
 
 export default FirstSlide;
